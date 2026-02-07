@@ -1,4 +1,5 @@
 from src.view.first_view import introduction_page
+from .constructor.song_registrer_constructor import song_register_process
 
 
 def start() -> None:
@@ -7,7 +8,7 @@ def start() -> None:
         command = introduction_page()
 
         if command == "1":
-            print("Inserindo musica..")
+            song_register_process()
         elif command == "2":
             print("Criando playlist..")
         elif command == "5":
