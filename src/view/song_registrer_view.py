@@ -43,5 +43,6 @@ class SongRegisterView:
 
 
     def __clear(self):
-       # os.system("cls||clear") # para ambiente windows
-        os.system("cls" if os.name == "nt" else "clear") # para mac
+        # os.system("cls||clear") # para ambiente windows
+        if os.getenv("TERM"):
+            os.system("cls" if os.name == "nt" else "clear") # para mac
