@@ -8,15 +8,14 @@ class PlaylistCreatorController:
             musics = self.__get_all_musics_and_verify()
             playlist = self.__create_playlist(musics)
             return self.__format_response(playlist)
-
         except Exception as exception:
             return self.__format_error_response(exception)
 
     def __get_all_musics_and_verify(self) -> list:
         musics = musics_repository.get_all_songs()
-        if musics is []: #compara identidade de objeto nao conteudo
+       # if musics is []: #compara identidade de objeto nao conteudo -> aqui nunca sera verdadeira
+        if not musics: # forma correta
             raise Exception('Nenhuma musica foi registrada!')
-
         return musics
 
 

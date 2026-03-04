@@ -1,5 +1,5 @@
 from src.controller.song_register_controller import SongRegisterController
-from src.view.song_registrer_view import SongRegisterView
+from src.main.constructor.song_registrer_controller import SongRegisterView
 
 
 def song_register_process():
